@@ -1,0 +1,45 @@
+{
+  "cli": {
+    "version": ">= 0.60.0"
+  },
+  "build": {
+    "development": {
+      "channel": "dev",
+      "developmentClient": true,
+      "distribution": "internal"
+    },
+    "preview": {
+      "distribution": "internal",
+      "channel": "staging",
+      "android": {
+        "buildType": "apk"
+      },
+      "ios": {
+        "simulator": true
+      }
+    },
+    "production": {
+      "channel": "production",
+      "android": {
+        "autoIncrement": "versionCode"
+      },
+      "ios": {
+        "autoIncrement": "buildNumber"
+      }
+    }
+  },
+  "submit": {
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "../expo-359821-d8f71256cde4.json",
+        "releaseStatus": "draft"
+      },
+      "ios": {
+        "appleId": "1639022876",
+        "ascApiKeyIssuerId": "6223ac4f-e3ff-4024-b4a5-321860f8274d",
+        "ascApiKeyId": "J462ASRZBX",
+        "ascApiKeyPath": "../AuthKey_J462ASRZBX.p8"
+      }
+    }
+  }
+}
